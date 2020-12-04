@@ -11,7 +11,7 @@ class Cart
 
    function add_coupon($cartid, $couponcode)
    {
-      $query = sprintf("SELECT * from `coupons` where code = '%s' LIMIT 1;", mysql_real_escape_string($couponcode));
+      $query = sprintf("SELECT * from `coupons` where code = '%s' limit 1;", mysql_real_escape_string($couponcode));
       if (!$res = mysql_query($query))
       {
 	 return False;
